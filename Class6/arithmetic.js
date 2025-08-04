@@ -1,9 +1,22 @@
-function validation(action) {
-    //Write code to check blank validation
+document.getElementById("add_btn").onclick = function(){
+  document.getElementById("action_btn").value = "add";
+}
 
-  let firstNum = parseInt(document.getElementById("first_num").value);
-  let secondNum = parseInt(document.getElementById("second_num").value);
-  performAction(firstNum, secondNum, action);
+function validation(e) {
+  e.preventDefault();
+
+  let action = document.getElementById("action_btn").value;
+  let firstNum = document.getElementById("first_num").value;
+  let secondNum = document.getElementById("second_num").value;
+  //blank validation
+  if (firstNum === "" || secondNum === "") {
+    document.getElementById("result_container").innerHTML = "Data is missing!";
+    return false;
+  } else {
+    // Only ASCII character of numbers allowed
+    
+  }
+  performAction(parseInt(firstNum), parseInt(secondNum), action);
 }
 
 function performAction(firstNum, secondNum, action) {
@@ -21,6 +34,6 @@ function performAction(firstNum, secondNum, action) {
       "Error! Something wrong!!!";
   }
 }
-function abc(){
-    return 2+3;
+function abc() {
+  return 2 + 3;
 }

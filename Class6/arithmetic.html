@@ -10,14 +10,14 @@
   </head>
   <body>
     <div>
-      <form >
+      <form name="frm" onsubmit="return validation(event)">
         <div>
           <label for="first_num">First Number</label>
-          <input type="number" name="first_num" id="first_num" required />
+          <input type="number" name="first_num" id="first_num" />
         </div>
         <div>
           <label for="second_num">Second Number</label>
-          <input type="number" name="second_num" id="second_num" reqired />
+          <input type="number" name="second_num" id="second_num" />
         </div>
         <div>
            <!--
@@ -25,11 +25,12 @@
             <button id="sub_btn">Sub</button>
             <button id="multiply_btn">Multiply</button>
            -->
-           <input type="button" name="add_btn" value="Add" onclick="return abc()" />
-           <input type="button" name="sub_btn" value="Sub" onclick="validation('sub')" />
-           <input type="button" name="multiply_btn" value="Multiply" onclick="validation('multiply')" />
+           <input type="submit" name="add_btn" id="add_btn" value="Add" />
+           <input type="submit" name="sub_btn" value="Sub" onclick="document.frm.action_btn.value='sub'" />
+           <input type="submit" name="multiply_btn" value="Multiply" onclick="document.frm.action_btn.value='multiply'" />
 
         </div>
+        <input type="hidden1" name="action_btn" id="action_btn" value="" />
       </form>
       <div id="result_container" style="margin:20px;width:400px;height:30px;border:1px solid #000;">
 
