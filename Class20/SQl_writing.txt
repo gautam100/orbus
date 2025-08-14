@@ -1,0 +1,53 @@
+-- SQL to print product name | Category Name | Supplier Name
+select a.productname, b.categoryname, c.suppliername 
+from products a
+INNER JOIN categories b on a.categoryid=b.categoryid
+INNER JOIN suppliers c on a.supplierid=c.supplierid
+ORDER BY b.categoryname;
+
+-- sql to find total quantity OrderID wise
+select OrderID, sum(quantity) as total_qty from orderdetails group by 
+orderID;
+
+-- SQL to print all orders (orderID and customerName) & orderDate should
+-- be between Aug 1996 and Jan 1997
+
+select IFNULL(o.orderId,'N/A') as order_id, c.CustomerName 
+from orders o
+right join 
+customers c
+on o.customerID = c.customerID
+where orderdate between '1996-01-01' and '1997-08-01';
+-- ------------------------------------------------------------
+-- SQL to fetch most expensive and least expensive product
+select 
+CategoryID,
+MIN(price) as least_expensive_price,
+MAX(price) as most_expensive_price
+from Products group by CategoryID;
+
+
+SELECT
+c.CategoryName,
+MIN(p.price) as least_expensive_price,
+MAX(p.price) as most_expensive_price
+FROM
+Products p INNER JOIN Categories c
+ON p.CategoryID=c.CategoryID
+GROUP BY c.CategoryID
+ORDER BY c.CategoryID ASC;
+ 
+-- Top 10 Selling products
+select p.ProductName, SUM(o.Quantity) as TotalSold from OrderDetails o 
+join Products p ON o.ProductId = p.ProductId group by 
+p.ProductName order by TotalSold desc Limit 10;
+
+-- Total revenues in Dec 1996
+
+
+-- Create a view with total revenues per customer.
+ 
+
+
+
+ 
