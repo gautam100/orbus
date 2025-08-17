@@ -1,0 +1,27 @@
+Step 1: Install Node
+
+Step 2: npm create vite@latest reactchapter1
+
+Step 3: Choose Framework as react & JavaScript
+
+Step 4: Run the below commands
+
+  cd reactchapter1
+  npm install --- package.json
+  npm run dev 
+
+Step 5: open your project in VSCode
+
+Step 6: Bootstrap Process
+
+ - index.html
+ - main.jsx
+ - App.jsx
+
+---------------------------------------------------
+Virtual DOM | Babel | 
+
+- In JSX there will be only one parent node
+- Component name should begin with caps
+- In Component return statement is mandatory
+---------------------------------------------------

@@ -1,0 +1,143 @@
+Relationship--
+
+
+One to One: User <--> Profile
+
+*Embedded document
+{
+   _id: ObjectId('.....'),
+   name: "John",
+   profile: {
+     age: 30,
+     gender: "Male"
+     address: "Mumbai"
+   }
+}
+
+*Reference
+// User Collection
+{
+    _id: ObjectId("1001"),
+    name: "John",
+    profile_id: 5001
+},
+{
+    _id: ObjectId("1002"),
+    name: "Smith",
+    profile_id: 5002
+
+}
+-----------------------------
+//profile collection
+{
+    _id: 5001,
+    age: 30,
+    gender: "Male",
+    address: "Mumbai"
+},
+{
+    _id: 5002,
+    age: 30,
+    gender: "Male",
+    address: "Mumbai"
+}
+
+
+
+
+
+One to Many: Customer <---> Orders
+*Embedded 
+{
+ _id: ObjectId("...."),
+ customer_name: "Raju",
+ orders: {
+	order_id: 10002,
+	amount: 550
+	}
+}
+
+*Reference
+
+//customer-Collection
+{
+ _id: ObjectId("10001"),
+ customer_name: "Raju"
+}
+
+//Orders-Collection
+{
+	_id: ObjectId("...."),
+	customerId: 10001,
+	amount: 550
+}
+{
+	_id: ObjectId("...."),
+	customerId: 10001,
+	amount: 750
+}
+
+
+
+
+
+
+
+Many to many: Students <---> Course
+
+//Collection: Students
+{
+	_id: ObjectId("101"),
+	name: "Raj",
+	course:["5001","5002"]
+
+},
+{
+	_id: ObjectId("102"),
+	name: "Rohit",
+	course:["5001","5002"]
+
+}
+
+//collection: Courses
+{
+	_id: ObjectId("5001"),
+	title: "Fundamentals of JS"
+	students: [101,102]
+},
+{
+	_id: ObjectId("5002"),
+	title: "Advance Mysql"
+	students: [101,102]
+}
+
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
