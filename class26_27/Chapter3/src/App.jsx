@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Wrapper from './components/Wrapper'
 import ControlledComponent from './components/ControlledComponent'
 import Loops from './components/Loops'
+import Checkbox from './components/Checkbox'
+import Radiobtn from './components/radiobtn'
+import Dropdown from './components/Dropdown'
 
 function App() {
 
@@ -21,6 +24,12 @@ function App() {
       <hr />
       <ControlledComponent />
       <Loops />
+      <hr />
+      <Checkbox />
+      <hr />
+      <Radiobtn />
+      <hr />
+      <Dropdown />
     </>
   )
 }
