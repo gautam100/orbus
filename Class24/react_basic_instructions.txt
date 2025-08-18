@@ -25,3 +25,7 @@ Virtual DOM | Babel |
 - Component name should begin with caps
 - In Component return statement is mandatory
 ---------------------------------------------------
+Hook:-
+
+useState
+

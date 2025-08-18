@@ -1,9 +1,11 @@
 import User from "./components/User";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
     <>
+    <div className="container-fluid">
       <h1>Hello World!</h1>
       <div>
         <div>
@@ -13,6 +15,7 @@ function App() {
         </div>
       </div>
       <User />
+      </div>
     </>
   )
 }
