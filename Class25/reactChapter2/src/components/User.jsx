@@ -1,4 +1,5 @@
 const User = (data) => {
+    console.log(data)
     return (
         <div>
             <p>
