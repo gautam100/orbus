@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Productitem from "./components/Productitem";
+import GetApi1 from "./components/GetApi1";
 
 function App() {
   const product = [
@@ -25,6 +26,8 @@ function App() {
       <div className="container">
         <h1>Shopping Cart</h1>
         <Productitem productData = {product} />
+        <hr />
+        <GetApi1 />
       </div>
     </>
   );
