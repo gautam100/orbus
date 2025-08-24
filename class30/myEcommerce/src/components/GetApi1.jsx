@@ -3,12 +3,19 @@ import axios from "axios";
 
 const GetApi1 = () => {
   let [userList, setUserList] = useState([]);
+  let [error, setError] = useState(null);
+
   const getUsers = async () => {
+    setUserList([{ name: "Loading...", id: "loading" }]);
     const apiResponse = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
-    setUserList(apiResponse.data);
-    console.log(apiResponse.data);
+    if (apiResponse.length === 0) {
+      setError("Error in API response");
+    } else {
+      setUserList(apiResponse.data);
+      console.log(apiResponse.data);
+    }
   };
   return (
     <div>
@@ -18,6 +25,7 @@ const GetApi1 = () => {
       </button>
       <div className="row">
         <div className="col">
+          {error == null ? " " : { error }}
           <ul>
             {userList.length > 0 ? (
               userList.map((item) => {

@@ -1,0 +1,170 @@
+JavaScript --
+
+1) Write JS code to remove duplicate values from an array?
+
+2) What is Event Loop?
+
+3)What is the difference between var, let and const?
+
+4) What is callback function and higher order function?
+
+5) What is spread and rest operator?
+
+6) How to Fetch and print out all keys from an object?
+
+7) What is Node Package Manager?
+
+8) What is the importance of package.json file?
+
+9) Ques: What is the output of below code:
+	var a = function(){
+		console.log(a);
+		var a = 10;
+	}
+	console.log(a());
+	var b = function(){
+		console.log(a);
+		let a = 10;
+	}
+	console.log(b());
+
+
+10) what is arrow function? Can you write the syntax of arrow function
+
+11) In any JS file I have two variables a and b. I want to use both these variable in any other js file, how can I do this?
+
+12) What is deep copy and shallow copy?
+
+13) What is prototype?
+
+14) What is hoisting?
+
+15) What is closure?
+
+16) Write code to count Duplicate elements from an array
+
+17) What is 'in' and 'of' keyword in JS?
+
+18) Explain below array functions
+	a) join()
+	b) split()
+	c) slice()
+	d) splice()
+	e) indexOf()
+	f) map()
+	g) reduce() 
+
+19) What is Debouncing?
+
+20) What is throttling?
+
+21) What are the different ways to create an object in JavaScript?
+
+22) explain event bubbling and event capturing.
+
+23) Explain the concept of a “callback hell”
+
+24) What is function currying?
+
+25) Write a code to explain promise. What is promise.any(), promise.race(), promise.all() & promise.allSettled()
+
+26) Difference between promise and async-await.
+
+27) What is DOM?
+
+-------------------------------------------------------------
+React
+
+28) What is JSX in React?
+29) What are the different types of components in React?
+30) What are props in React?
+31) What are state and its uses in React?
+32) What is useState hook?
+33) What is the virtual DOM, and how does React use it to render the DOM?
+34) What is useEffect hook?
+35) Explain component life cycle in React
+36) Explain Controlled Vs Uncontrolled Components
+37) What is Higher Order Component?
+38) What are keys in React?
+39) What is error boundary?
+40)  How to pass data between react components?
+41) What is React Router?
+42) What is Lazy loading?
+43) Difference between Real DOM and Virtual DOM? 
+44) What is Babel?
+45) Difference between Props and state?
+46) What is Axios?
+47) Create a simple counter using React?
+48) How to display a list in React?
+49) Explain the concept of "lifting state up" in React.
+50) What is SSR in React?
+
+-----------------------------------------------------------------
+
+MYSQL:
+
+51) What is difference between char and varchar?
+52) What is difference between Inner Join and Outer Join?
+53) What is difference between where and having clauses?
+54) What are indexes and why it is important?
+55) Which table engine supports foreign key?
+56) What is AUTO_INCREMENT?
+57) Explain difference between Innodb and Myisam?
+58) What is normalization?
+59) What is ACID properties?
+60) What is stored procedure?
+61) What is cascade?
+62) What is Full Text Index?
+63) Explain difference between DELETE and TRUNCATE?
+64) What are foreign key constraints, and how do they affect the design of a MySQL database?
+65) What are views in MySQL? How are they different from tables?
+66) How do you use stored functions in MySQL, and what are their benefits?
+67) How do you find the second-highest salary from an employee table?
+SELECT MAX(salary) AS SecondHighestSalary
+FROM Employee
+WHERE salary < (SELECT MAX(salary) FROM Employee);
+68) How do you count the number of records in a table?
+69) What is the command to create view?
+70) How to remove duplicate values of a column from result set?
+71) What is drop command?
+72) What is the maximum length of varchar?
+73) Which function returns today’s date and current time?
+74) Which data-type can store image in mysql?
+75) What is the SQL to check list of tables?
+76) What is the SQL to execute a stored procedure?
+77) What is the significance of HAVING clause in MySQL?
+78) What is the SQL to fetch details of all users who registered in year 2024?  
+79) What type of join returns all records from the left table and matched records from the right table in MySQL?
+80) Write a query to find the maximum, minimum, and average salary of employees.
+81) Write a SQL query to find the total number of orders placed by each customer in an Orders table.
+82) What is a Composite Key in SQL?
+83) Explain the difference between BETWEEN and IN in SQL.
+84) What are NULL values in SQL, and how are they handled?
+85) What are aggregate functions in SQL? Can you name some?
+86) Difference between COUNT(*) and COUNT(Column_nme)?
+
+
+-------------------------------------------------------------
+Server Side Questions:
+
+87) What is Http status code?
+88) Difference between put and patch Http request method?
+89) Difference between post and GET http request method?
+90) What is SQL injection?
+91) Why should we use ORM?
+92) Explain the concept of CORS (Cross-Origin Resource Sharing) and how would you handle it
+93) What are the differences between SQL and NoSQL databases?
+94) How do you optimize database queries?
+95) what is caching?
+96) How do you scale a website for millions of users?
+97) What is CSRF?
+98) Explain securities in web application?
+
+-------------------------------------------------------------
+Agile --
+
+99) What is Agile and Scrum?
+100) What is sprint in Agile?
+101) What are scrum ceremonies and explain each? 
+
+
