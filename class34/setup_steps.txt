@@ -1,0 +1,39 @@
+Step 1: Install Virtual Env
+ - pip install virtualenv
+
+Step 2: Create Virtual environment say env
+- virtualenv env
+NOTE: This will create a new folder "env"
+
+Step 3: Now activate the virtual environment "env"
+cd env
+cd scripts
+activate
+
+-> Now we will be inside virtual environment
+
+
+Step 4: pip install Django
+
+Step 5: Create a new project say "core" in django
+
+- django-admin startproject <core>
+
+Step 6: Create App
+- python manage.py startapp <home>
+
+Step 7: Go to core\settings.py & in INSTALLED_APPS list put the name of created App
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'home'
+]
+
+Step 8: Start the development server 
+- python manage.py runserver
+- python manage.py runserver 0.0.0.0:4000
