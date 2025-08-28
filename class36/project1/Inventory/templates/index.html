@@ -6,6 +6,7 @@
   <div class="row">
     <div class="col">
       <h1>CRUD - Inventory Management </h1>
+      
     </div>
   </div>
   
@@ -13,21 +14,22 @@
     <div class="col">
         <div class="float-start m-4">
             <a href="{% url 'display_laptops' %}" class="btn btn-primary m-2">Laptop</a>
-            <a href="#" class="btn btn-primary">+</a>
+            <a href="{% url 'add_laptop' %}" class="btn btn-primary">+</a>
         </div>
         <div class="float-start m-4">
             <a href="{% url 'display_desktops' %}" class="btn btn-primary m-2">Desktop</a>
-            <a href='#' class="btn btn-primary">+</a>
+            <a href="{% url 'add_desktop' %}" class="btn btn-primary">+</a>
         </div>
         <div class="float-start m-4">
             <a href="{% url 'display_mobiles' %}" class="btn btn-primary m-2">Mobile</a>
-            <a href="#" class="btn btn-primary">+</a>
+            <a href="{% url 'add_mobile' %}" class="btn btn-primary">+</a>
         </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col">
+      <strong>Category:{{title}}</strong>
       <table class="table table-striped table-hover">
         <tr>
           <td>Sr. No.</td>
