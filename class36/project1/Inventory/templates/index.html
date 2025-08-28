@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>CRUD - Inventory Management </h1>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col">
+        <div class="float-start m-4">
+            <a href="{% url 'display_laptops' %}" class="btn btn-primary m-2">Laptop</a>
+            <a href="#" class="btn btn-primary">+</a>
+        </div>
+        <div class="float-start m-4">
+            <a href="{% url 'display_desktops' %}" class="btn btn-primary m-2">Desktop</a>
+            <a href='#' class="btn btn-primary">+</a>
+        </div>
+        <div class="float-start m-4">
+            <a href="{% url 'display_mobiles' %}" class="btn btn-primary m-2">Mobile</a>
+            <a href="#" class="btn btn-primary">+</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped table-hover">
+        <tr>
+          <td>Sr. No.</td>
+          <td>Type</td>
+          <td>Price</td>
+          <td>Status</td>
+          <td>Issue</td>
+        </tr>
+        {% for item in items %}
+        <tr>
+          <td>{{item.pk}}</td>
+          <td>{{item.type}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.status}}</td>
+          <td>{{item.issues}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+
+
+
+</div>
+{% endblock %}
