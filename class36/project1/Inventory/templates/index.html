@@ -37,6 +37,7 @@
           <td>Price</td>
           <td>Status</td>
           <td>Issue</td>
+          <td>Action</td>
         </tr>
         {% for item in items %}
         <tr>
@@ -45,6 +46,18 @@
           <td>{{item.price}}</td>
           <td>{{item.status}}</td>
           <td>{{item.issues}}</td>
+          <td>
+            {% if title == 'Laptop' %}
+            <a href="{% url 'edit_laptop' item.id %}" class="btn btn-success">Edit</a>
+            <a href="{% url 'delete_laptop' item.id %}" class="btn btn-danger">Del</a>
+            {% elif title == 'Desktop' %}
+             <a href="{% url 'edit_desktop' item.pk %}" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Del</a>
+            {% else %}
+            <a href="{% url 'edit_mobile' item.pk %}" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Del</a>
+            {% endif %}
+          </td>
         </tr>
         {% endfor %}
       </table>
